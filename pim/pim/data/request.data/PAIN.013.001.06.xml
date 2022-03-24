@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Body>
+   <AppHdr xmlns="u:iso:std:iso:20022:tech:xsd:head.001.001.01">
+      <Fr>
+         <FIId>
+            <FinInstnId>
+               <BICFI>FROM</BICFI>
+            </FinInstnId>
+         </FIId>
+      </Fr>
+      <To>
+         <FIId>
+            <FinInstnId>
+               <BICFI>TO</BICFI>
+            </FinInstnId>
+         </FIId>
+      </To>
+      <BizMsgIdr>RTPIDTP20201202092739049</BizMsgIdr>
+      <MsgDefIdr>pain.013.001.06</MsgDefIdr>
+      <BizSvc>IDTP</BizSvc>
+      <CreDt>2020-12-02T15:27:39Z</CreDt>
+   </AppHdr>
+   <Document xmlns="u:iso:std:iso:20022:tech:xsd:pain.013.001.06" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <CdtrPmtActvtnReq>
+         <GrpHdr>
+            <MsgId>RTPIDTP20201202092739049</MsgId>
+            <CreDtTm>2020-12-02T15:27:39</CreDtTm>
+            <NbOfTxs>1</NbOfTxs>
+            <InitgPty>
+               <Id>
+                  <OrgId>
+                     <Othr>
+                        <Id>sampleuser6@user.idtp</Id>
+                     </Othr>
+                  </OrgId>
+               </Id>
+            </InitgPty>
+         </GrpHdr>
+         <PmtInf>
+            <PmtInfId>RTPIDTP20201202092739049</PmtInfId>
+            <PmtMtd>TRF</PmtMtd>
+            <ReqdExctnDt>2020-12-02</ReqdExctnDt>
+            <Dbtr>
+               <Nm>sampleuser66@user.idtp</Nm>
+               <Id>
+                  <OrgId>
+                     <Othr>
+                        <Id>sampleuser66@user.idtp</Id>
+                        <SchmeNm>
+                           <Cd>CUST</Cd>
+                        </SchmeNm>
+                     </Othr>
+                  </OrgId>
+               </Id>
+               <CtryOfRes>BD</CtryOfRes>
+            </Dbtr>
+            <DbtrAcct>
+               <Id>
+                  <Othr>
+                     <Id />
+                  </Othr>
+               </Id>
+            </DbtrAcct>
+            <DbtrAgt>
+               <FinInstnId>
+                  <ClrSysMmbId>
+                     <MmbId />
+                  </ClrSysMmbId>
+               </FinInstnId>
+            </DbtrAgt>
+            <CdtTrfTx>
+               <PmtId>
+                  <EndToEndId>RTPIDTP20201202092739049</EndToEndId>
+               </PmtId>
+               <PmtTpInf>
+                  <SvcLvl>
+                     <Cd>SDVA</Cd>
+                  </SvcLvl>
+                  <LclInstrm>
+                     <Prtry>BUSINESS</Prtry>
+                  </LclInstrm>
+               </PmtTpInf>
+               <Amt>
+                  <InstdAmt Ccy="BDT">100</InstdAmt>
+               </Amt>
+               <ChrgBr>SLEV</ChrgBr>
+               <CdtrAgt>
+                  <FinInstnId>
+                     <ClrSysMmbId>
+                        <MmbId />
+                     </ClrSysMmbId>
+                  </FinInstnId>
+               </CdtrAgt>
+               <Cdtr>
+                  <Nm>sampleuser6@user.idtp</Nm>
+                  <Id>
+                     <OrgId>
+                        <Othr>
+                           <Id>sampleuser6@user.idtp</Id>
+                           <SchmeNm>
+                              <Cd>CUST</Cd>
+                           </SchmeNm>
+                        </Othr>
+                     </OrgId>
+                  </Id>
+               </Cdtr>
+               <CdtrAcct>
+                  <Id>
+                     <Othr>
+                        <Id />
+                     </Othr>
+                  </Id>
+               </CdtrAcct>
+               <RmtInf>
+                  <Ustrd>Test</Ustrd>
+               </RmtInf>
+               <SplmtryData>
+                  <Envlp>
+                     <ChannelInfo>
+                        <ChannelID>Online</ChannelID>
+                     </ChannelInfo>
+                     <Creds>
+                        <Cred type="IDTP_PIN" subtype="">
+                           <Data>XXXXXX</Data>
+                        </Cred>
+                     </Creds>
+                     <Device_Info>
+                        <Device_ID />
+                        <Mobile_No />
+                        <Location />
+                        <IP />
+                     </Device_Info>
+                  </Envlp>
+               </SplmtryData>
+            </CdtTrfTx>
+         </PmtInf>
+      </CdtrPmtActvtnReq>
+   </Document>
+</Body>

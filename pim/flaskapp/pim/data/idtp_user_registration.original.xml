@@ -1,0 +1,62 @@
+<RegisterUser xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+  <Head ver="1.0" ts="01/19/2021 05:26:52" orgId="SCBLBDDX" msgId="1" ></Head>
+  <Req id="800a6c7e-b151-43c0-82de-0053899d4c4c" note="RegisterUser" 
+  ts="01/19/2021 05:26:52" type="RegisterUser" ></Req>
+  <Entity seqNum="1">
+    <Info>
+      <EntityType>Individual</EntityType>
+      <Name>Md Shariful Islam</Name>
+      <AddressLine1>Uttara, Dhaka</AddressLine1>
+      <AddressLine2>Uttara</AddressLine2>
+      <District>Dhaka</District>
+      <PostalCode>1230</PostalCode>
+      <MobileNumber>01623067403</MobileNumber>
+      <Email>MdShariful.Islam@sc.com</Email>
+      <TypeOfOwnership></TypeOfOwnership>
+      <TypeOfBusiness></TypeOfBusiness>
+      <NameOfMinistry></NameOfMinistry>
+      <NameOfDivision></NameOfDivision>
+      <TypeOfFinancialInstitution></TypeOfFinancialInstitution>
+      <SwiftCode></SwiftCode>
+      <CBAccountNumber></CBAccountNumber>
+      <NID>1911872733322</NID>
+      <TIN>055710312022</TIN>
+      <BIN></BIN>
+      <IDTPKey></IDTPKey>
+      <DateOfBirth>08/15/1988 00:00:00</DateOfBirth>
+      <DateOfIncorporation>01/01/0001 00:00:00</DateOfIncorporation>
+      <CallBackURL></CallBackURL>
+      <Password>1234</Password>
+    </Info>
+    <DeviceInfo>
+      <Device_ID></Device_ID>
+      <Mobile_No></Mobile_No>
+      <Location></Location>
+      <IP></IP>
+    </DeviceInfo>
+    <FinancialInstitutionInfo>
+      <FinancialInstitution>Standard Chartered</FinancialInstitution>
+      <BranchName></BranchName>
+      <RoutingNumber>SCBLBDDH</RoutingNumber>
+      <AccountNumber>01192384501</AccountNumber>
+    </FinancialInstitutionInfo>
+    <ContactReference>
+      <ContactPersonName></ContactPersonName>
+      <Designation></Designation>
+      <ContactNumber></ContactNumber>
+      <Email></Email>
+    </ContactReference>
+    <Creds>
+      <Cred type="IDTP_PIN" subtype="">
+        <Data>123456</Data>
+      </Cred>
+      <Cred type="APP_PASS" subtype="">
+        <Data>1234</Data>
+      </Cred>
+    </Creds>
+    <RequestedVirtualID value="sharifulscbl@user.idtp" ></RequestedVirtualID>
+    <OtherInfo>
+      <Channel>Online</Channel>
+    </OtherInfo>
+  </Entity>
+</RegisterUser>

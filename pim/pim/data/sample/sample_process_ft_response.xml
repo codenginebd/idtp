@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPDU xmlns="urn:swift:saa:xsd:saa.2.0">
+   <Revision>2.0.5</Revision>
+   <Body>
+      <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+         <Fr>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>SBL1BDDH</BICFI>
+               </FinInstnId>
+            </FIId>
+         </Fr>
+         <To>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>IDTP</BICFI>
+               </FinInstnId>
+            </FIId>
+         </To>
+         <BizMsgIdr>TRAN202010251000000084</BizMsgIdr>
+         <MsgDefIdr>pacs.002.001.05</MsgDefIdr>
+         <BizSvc>IDTP</BizSvc>
+         <CreDt>2021-02-01T13:10:53Z</CreDt>
+      </AppHdr>
+      <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.002.001.05">
+         <FIToFIPmtStsRpt>
+            <GrpHdr>
+               <MsgId>TRAN202010251000000084</MsgId>
+               <CreDtTm>2021-02-01T13:10:53</CreDtTm>
+            </GrpHdr>
+            <OrgnlGrpInfAndSts>
+               <OrgnlMsgId>TRAN202010251000000084</OrgnlMsgId>
+               <OrgnlMsgNmId>pacs.008.001.06</OrgnlMsgNmId>
+               <OrgnlCreDtTm>2021-02-01T13:10:53</OrgnlCreDtTm>
+               <GrpSts>ACSP</GrpSts>
+               <StsRsnInf>
+                  <Rsn>
+                     <Prtry />
+                  </Rsn>
+                  <AddtlInf />
+               </StsRsnInf>
+            </OrgnlGrpInfAndSts>
+            <TxInfAndSts>
+               <OrgnlInstrId>SPSP220201025114733345</OrgnlInstrId>
+               <OrgnlEndToEndId>SPSP220201025114733345</OrgnlEndToEndId>
+               <OrgnlTxId>SPSP220201025114733345</OrgnlTxId>
+               <TxSts>ACSP</TxSts>
+               <StsRsnInf>
+                  <Rsn>
+                     <Prtry />
+                  </Rsn>
+               </StsRsnInf>
+               <InstgAgt>
+                  <FinInstnId>
+                     <BICFI>SBL1BDDH</BICFI>
+                  </FinInstnId>
+               </InstgAgt>
+               <OrgnlTxRef>
+                  <IntrBkSttlmDt>2021-02-01</IntrBkSttlmDt>
+                  <IntrBkSttlmAmt Ccy="BDT">100.500</IntrBkSttlmAmt>
+               </OrgnlTxRef>
+            </TxInfAndSts>
+            <SplmtryData>
+               <PlcAndNm />
+               <Envlp>
+                  <ChannelInfo>
+                     <ChannelID>Online</ChannelID>
+                  </ChannelInfo>
+                  <Tx_Tracking_Info>
+                     <RefNo_SendingPSP />
+                     <RefNo_SendingBank>SPSP220201025114733345</RefNo_SendingBank>
+                     <RefNo_ReceivingBank>SBL1BDDH20210201071053360</RefNo_ReceivingBank>
+                     <RefNo_ReceivingPSP />
+                     <RefNo_IDTP>TRAN202010251000000084</RefNo_IDTP>
+                  </Tx_Tracking_Info>
+               </Envlp>
+            </SplmtryData>
+         </FIToFIPmtStsRpt>
+      </Document>
+   </Body>
+</DataPDU>

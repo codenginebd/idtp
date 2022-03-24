@@ -1,0 +1,34 @@
+<CreateRTP xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+    <Head ver="1.0" ts="2020-05-16T14:15:43+05:30" orgId="SCBLBDDX" msgId ="1" ></Head>
+    <Req id="8ENSVVR4QOS7X1UGPY7JGUV444PL9T2C3QM" note="Request To Pay" ts="2020-05-16T14:15:42+05:30" type ="REQUESTTOPAY"></Req>
+    <ChannelInfo>
+        <ChannelID>Online</ChannelID>
+    </ChannelInfo>
+    <RequestInfo addr="" type="" >
+        <SenderInfo>
+            <SenderVID value="{payee_vid}" ></SenderVID>
+        </SenderInfo>
+        <DeviceInfo>
+            <Device_ID></Device_ID>
+            <Mobile_No></Mobile_No>
+            <Location></Location>
+            <IP></IP>
+        </DeviceInfo>
+        <ReceiverInfo>
+            <ReceiverVID value="{payer_vid}" ></ReceiverVID>
+        </ReceiverInfo>
+        <ReqInfo addrType="" >
+            <ReferenceNo value="{request_id}"></ReferenceNo>
+            <ReqAmount value="{amount}"></ReqAmount>
+        </ReqInfo>
+        <OtherInfo>
+            <Purpose>{purpose}</Purpose>
+            <Call_From>FIApp</Call_From>
+        </OtherInfo>
+        <Creds>
+            <Cred type="IDTP_PIN" subtype="" >
+                <Data>{idtp_pin}</Data>
+            </Cred>
+        </Creds>
+    </RequestInfo>
+</CreateRTP>

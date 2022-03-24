@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PIM - Participant Interface Module(IDTP)</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/fa.all.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+      <style>
+          .lspacing-03 { letter-spacing: 0.03rem!important; }
+          .fweight-600 { font-weight: 600!important; }
+          .fweight-500 { font-weight: 500!important; }
+      </style>
+  </head>
+  <body>
+      {% include "partials/header.html" %}
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-column p-3">
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Account No
+                        </th>
+                        <th>
+                            idtp_vid
+                        </th>
+                        <th>
+                            account_status
+                        </th>
+                        <th>
+                            idtp_status
+                        </th>
+                        <th>
+                            balance
+                        </th>
+                        <th>
+                            mobile_number
+                        </th>
+                        <th>
+                            full_name
+                        </th>
+                        <th>
+                            email
+                        </th>
+                        <th>
+                            nid
+                        </th>
+                        <th>
+                            tin
+                        </th>
+                        <th>
+                            dob
+                        </th>
+                        <th>
+                            address_line1
+                        </th>
+                        <th>
+                            address_line2
+                        </th>
+                        <th>
+                            district
+                        </th>
+                        <th>
+                            postal_code
+                        </th>
+                        <th>
+                            Created On
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in accounts %}
+                        <tr>
+                            <td>
+                                {{ item.id }}
+                            </td>
+                            <td>
+                                {{ item.account_number }}
+                            </td>
+                            <td>
+                                {{ item.idtp_vid }}
+                            </td>
+                            <td>
+                                {{ item.account_status }}
+                            </td>
+                            <td>
+                                {{ item.idtp_status }}
+                            </td>
+                            <td>
+                                {{ item.balance|floatformat:2 }}
+                            </td>
+                            <td>
+                                {{ item.mobile_number }}
+                            </td>
+                            <td>
+                                {{ item.full_name }}
+                            </td>
+                            <td>
+                                {{ item.email }}
+                            </td>
+                            <td>
+                                {{ item.nid }}
+                            </td>
+                            <td>
+                                {{ item.tin }}
+                            </td>
+                            <td>
+                                {{ item.dob }}
+                            </td>
+                            <td>
+                                {{ item.address_line1 }}
+                            </td>
+                            <td>
+                                {{ item.address_line2 }}
+                            </td>
+                            <td>
+                                {{ item.district }}
+                            </td>
+                            <td>
+                                {{ item.postal_code }}
+                            </td>
+                            <td>
+                                {{ item.date_created }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+    <script src="{% static "js/jquery-3.5.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+  </body>
+</html>

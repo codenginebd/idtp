@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPDU xmlns="urn:swift:saa:xsd:saa.2.0">
+   <Revision>2.0.5</Revision>
+   <Body>
+      <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+         <Fr>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>SCBLBDDX</BICFI>
+               </FinInstnId>
+            </FIId>
+         </Fr>
+         <To>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>IDTP</BICFI>
+               </FinInstnId>
+            </FIId>
+         </To>
+         <BizMsgIdr>{idtp_ref_no}</BizMsgIdr>
+         <MsgDefIdr>pacs.002.001.05</MsgDefIdr>
+         <BizSvc>IDTP</BizSvc>
+         <CreDt>{timestamp}</CreDt>
+      </AppHdr>
+      <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.002.001.05">
+         <FIToFIPmtStsRpt>
+            <GrpHdr>
+               <MsgId>{sending_fi_msg_id}</MsgId>
+               <CreDtTm>{timestamp}</CreDtTm>
+            </GrpHdr>
+            <OrgnlGrpInfAndSts>
+               <OrgnlMsgId>{idtp_ref_no}</OrgnlMsgId>
+               <OrgnlMsgNmId>pacs.008.001.06</OrgnlMsgNmId>
+               <OrgnlCreDtTm>{cred_tm}</OrgnlCreDtTm>
+               <GrpSts>{ft_status}</GrpSts>
+               <StsRsnInf>
+                  <Rsn>
+                      <Prtry/>
+                  </Rsn>
+                   <AddtlInf>{ft_reason}</AddtlInf>
+               </StsRsnInf>
+            </OrgnlGrpInfAndSts>
+            <TxInfAndSts>
+               <OrgnlInstrId>{idtp_ref_no}</OrgnlInstrId>
+               <OrgnlEndToEndId>{sending_fi_msg_id}</OrgnlEndToEndId>
+               <OrgnlTxId>{idtp_ref_no}</OrgnlTxId>
+               <TxSts>ACSP</TxSts>
+               <StsRsnInf>
+                  <Rsn>
+                     <Prtry />
+                  </Rsn>
+               </StsRsnInf>
+               <InstgAgt>
+                  <FinInstnId>
+                     <BICFI>{instgagt}</BICFI>
+                  </FinInstnId>
+               </InstgAgt>
+               <OrgnlTxRef>
+                  <IntrBkSttlmDt>{settlement_date}</IntrBkSttlmDt>
+                  <IntrBkSttlmAmt Ccy="BDT">{amount}</IntrBkSttlmAmt>
+               </OrgnlTxRef>
+            </TxInfAndSts>
+            <SplmtryData>
+               <PlcAndNm />
+               <Envlp>
+                  <ChannelInfo>
+                     <ChannelID>Online</ChannelID>
+                  </ChannelInfo>
+                  <Tx_Tracking_Info>
+                     <RefNo_SendingPSP />
+                     <RefNo_SendingBank>{sending_fi_msg_id}</RefNo_SendingBank>
+                     <RefNo_ReceivingBank>{receiving_bank_ref}</RefNo_ReceivingBank>
+                     <RefNo_ReceivingPSP />
+                     <RefNo_IDTP>{idtp_ref_no}</RefNo_IDTP>
+                  </Tx_Tracking_Info>
+               </Envlp>
+            </SplmtryData>
+         </FIToFIPmtStsRpt>
+      </Document>
+   </Body>
+</DataPDU>

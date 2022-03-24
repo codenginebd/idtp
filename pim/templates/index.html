@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PIM - Participant Interface Module(IDTP)</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/fa.all.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+      <style>
+          .lspacing-03 { letter-spacing: 0.03rem!important; }
+          .fweight-600 { font-weight: 600!important; }
+          .fweight-500 { font-weight: 500!important; }
+      </style>
+  </head>
+  <body>
+      {% include "partials/header.html" %}
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-column p-3">
+            <table class="table table-light table-responsive">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            IDTP VID
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Account
+                        </th>
+                        <th>
+                            Created On
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in user_list %}
+                        <tr>
+                            <td>
+                                {{ user.FullName }}
+                            </td>
+                            <td>
+                                {{ user.VirtualID }}
+                            </td>
+                            <td>
+                                {{ user.Email }}
+                            </td>
+                            <td>
+                                {{ user.FIInfo.AccountNumber }}
+                            </td>
+                            <td>
+                                {{ user.CreatedOn }}
+                            </td>
+                            <td>
+                                <a class="text-dark d-block" style="text-decoration: underline;" href="{% url "get_rtp_list_sent_view" %}?vid={{ user.VirtualID }}">View RTP Sent</a>
+                                <a class="text-dark d-block" style="text-decoration: underline;" href="{% url "get_rtp_list_received_view" %}?receiver_vid={{ user.VirtualID }}">View RTP Received</a>
+                                <a class="text-dark d-block view-user-tnx" style="text-decoration: underline;" data-vid="{{ user.VirtualID }}">View Tnx</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+    <script src="{% static "js/jquery-3.5.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+  </body>
+</html>

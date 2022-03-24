@@ -1,0 +1,155 @@
+BB
+
+IDTP Portal:
+http://10.237.16.104/
+
+IDTP API:
+http://10.237.16.104/partnerapi
+
+http://10.237.16.103 port 80
+
+Cloud:
+
+IDTP Portal:
+http://pilot.idtpbd.com:7777/
+
+IDTP API:
+http://pilot.idtpbd.com:7777/partnerapi/
+
+//
+http://pilot.idtpbd.com:7777/Identity/Account/Login?ReturnUrl=%2F
+http://pilot.idtpbd.com:7777/partnerapi/swagger/index.html
+
+SCB IDTP portal credentials:
+FI Virtual ID: SCBL@fin.idtp
+Password: Scbl123@
+
+
+Notes:
+In our server:
+1. ICP API endpoint 192.168.88.142:8081/
+2. ICP Swagger 192.168.88.142:8081/swagger/index.html
+
+PIM Endpoint:
+http://192.168.88.142:8001/
+
+ICP portal for endpoints and other config:
+http://192.168.88.142:8082
+
+
+// Copy db to the server from local machine
+scp C:\Users\SCBIT\Desktop\Shariful\ICPDatabase.db icp@192.168.88.142:/app/db/
+
+From Mahbub vai Orient group
+================================================
+IDTP Server Portal Address :
+http://pilot.idtpbd.com:7777/ 
+Fi virtual Id : SCBL@fin.idtp
+Password: Scbl123@
+ICP Portal Address : 
+http://play.idtpbd.com:6062/Home/LogIn 
+ICP Api Endpoint Address: 
+http://play.idtpbd.com:6061/ 
+ICP Api Endpoint Swagger:
+http://play.idtpbd.com:6061/swagger/index.html 
+Sample PIM Portal Address : 
+http://play.idtpbd.com:6066/
+Sample PIM Api Endpoint Swagger (Incoming interface): http://play.idtpbd.com:6065/swagger/index.html
+white_tick
+eyes
+raised_hands
+React
+Reply
+
+6141
+
+17:08
+IDTP API endpoint: http://pilot.idtpbd.com:7777/partnerapi/
+
+
+///
+
+docker run -v /app/db:/app/db -v /app/scripts:/app/scripts -p 8000-8009:6000-6009 --name ICP -d orioninformatics/idtp-icp:v0.8 /bin/sh /app/scripts/run.sh
+
+
+// Steps to setup
+
+1. adjust the dockerstart script in /app/ using icp user
+2. Now if the ports were between 8000-8009 then ICP portal is available at 8002 and API at 8001
+3. Clear the device id using 00000000 and enter correct credentials in Sqlite db then copy in /app/db directory
+4. Run the dockerstart script in /app/
+5. Go to ICP portal at 8002
+6. Register Device ID
+7. 
+
+cssview/P@ssc0de
+
+scb/linux03
+
+Server IP: 10.248.51.67
+
+Validate
+Balance
+
+===============================================================================
+Bank Name: Standard Chartered Bank
+ICP IP: 10.240.51.67
+
+===============================================================================
+Run Gunicorn
+
+gunicorn --bind 0.0.0.0:8021 --workers 3 wsgi:application
+
+Docker copy
+===============================================================================
+docker cp 498dcf726ad1:/app/dbrun/ICPDatabase.db /home/icp/DB/
+scp icp@192.168.88.142:/home/icp/DB/ICPDatabase.db C:\Users\SCBIT\Desktop\Shariful\DB\db6\d\
+
+Device ID: 0242AC110002
+
+===============================================================================
+account_number
+account_status
+balance
+mobile_number
+full_name
+email
+nid
+tin
+dob(1988-12-30)
+address_line1
+address_line2
+district
+postal_code
+
+<TransactionResponse>
+  <Code>200</Code>
+  <Message>Success</Message>
+  <RefNo_SendingBank>0550e44e-3424-4e3c-a4a8-e916d49b72db</RefNo_SendingBank>
+  <RefNo_SendingPSP></RefNo_SendingPSP>
+  <RefNo_ReceivingBank>EBLDBDDH20210204065114294</RefNo_ReceivingBank>
+  <RefNo_ReceivingPSP></RefNo_ReceivingPSP>
+  <RefNo_IDTP>IDTP20210204125005604</RefNo_IDTP>
+</TransactionResponse>
+
+10 VID
+============================
+sohelscbl@user.idtp
+kahsanscbl@user.idtp
+javedscbl@user.idtp
+sharifulscbl@user.idtp
+maidulscbl@user.idtp
+farzanascbl@user.idtp
+pavelscbl@user.idtp
+apurbascbl@user.idtp
+saidulscbl@user.idtp
+tamannascbl@user.idtp
+
+
+Jamil Vais setup:
+
+emerg1@119.148.2.18 IDTP@t3stl1nkintem
+
+iDrac: 119.148.2.18 /  IDTP@t3stl1nkintem
+
+IDTP@t3stl1nkintem

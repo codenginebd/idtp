@@ -1,0 +1,55 @@
+.theme-sec-token-input {
+    width: 40px;
+    font-weight: bold;
+    font-size: 20;
+  }
+  .dz-progress {
+      display: none!important;
+    }
+  .theme-form-input-container {
+    height: 60px;
+  }
+  .theme-form-input-label {
+    margin-bottom: -50px;
+    padding-left: 5px;
+    padding-top: 2px;
+    position: absolute;
+    color: #ccc;
+  }
+  .theme-form-input {
+    height: 100%;
+    max-width: 400px;
+    padding-bottom: -10px;
+  }
+
+  .theme-input {
+    border: 1px solid #e8e8e8;
+  }
+
+  .counter-value {
+    min-width: 50px;
+  }
+
+  .ml-20 {
+    margin-left: 20px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .disable-edit {
+    background-color: white;
+  }
+
+  .nav-item a {
+    letter-spacing: 0.05rem!important;
+  }
+
+  @media only screen and (max-width: 600px)
+  {
+    .create-listing-step1-right {
+      display: none;
+    }
+  }

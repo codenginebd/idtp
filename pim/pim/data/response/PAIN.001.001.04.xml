@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance"
+xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.04">
+<CstmrCdtTrfInitn>
+<GrpHdr>
+<MsgId>MSG_334873223482738299</MsgId>
+<CreDtTm>2020-04-28T14:07:00</CreDtTm>
+<NbOfTxs>1</NbOfTxs>
+<CtrlSum>1000</CtrlSum>
+<InitgPty>
+<Nm>SAMPLENAME1</Nm>
+</InitgPty>
+<Sgntr>
+<ds:Signature Id="_beddd7de-c63a–43a6-9b62-f69290939eb6"
+xmlns:ds="http://www.w3.org/2000/09/xmldsig#”>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod
+Algorithm="http://www.w3.org/2001/ 10/xml -excc14n#"/>
+<ds:SignatureMethod Algorithm="http: /
+/www.w3.org/2001/04/xmldsigmore#rsa- sha256"/>
+<ds:Reference URI="#_98742d60-2afc -4fa7-a731-828756ce47b1">
+<ds:Transforms>
+<ds:Transform Algorithm="http:
+//www.w3.org/2001/10/xml-exc- cl4n#"/>
+</ds:Transforms >
+<ds:DigestMethod Algorithm="http:
+//www.w3.org/2001/04/xmlenc#sha256" />
+<ds:DigestValue>vB/
+xxu+qkEVUH5i9uVdBHOXOp6+XDsAn/iHxH+UiMGo=</ds
+:DigestValue>
+</ds:Reference>
+<ds: Reference URI="">
+<ds:Transforms>
+<ds: Transform Algorithm="http:
+//www.w3.
+org/2000/09/xmldsig#tenvelopedsignature” />
+<ds: Transform Algorithm="http: //www.w3.
+org/2001/10/xml-exc- cl4n#"/>
+</ds: Transforms >
+<ds:DigestMethod
+Algorithm="http: //www.
+w3.org/2001/04/xmlenc#sha256" />
+<ds:DigestValue>hWGkHPu5IMYxe4KF
+YyaMOFWYqOw2pi+BYnYvHEwm/Z8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference>
+<ds:Transforms>
+<ds: Transform Algorithm="http:
+//www.w3.org/2001/10/xml-exc- c14n#"/>
+</ds:Transforms >
+<ds:DigestMethod
+Algorithm="http: //www.
+w3.org/2001/04/xmlenc#sha256" />
+<ds:DigestValue
+>10eHeNdJM1v177MOHzFsmP0IBMYvdPXVuRcR77hAgUg=</ds
+:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>H11itYLicuuSdrRrzuSCFxk5G2Z3LDOOnEPCrXkfwiuS
+dyOzA3P2r6Ale1cYidueY8niolEvcZcvKVS4zt6bbHvSRRabinU+J£13x4vTHSg
+SWERY1OLPErRbTNcn9r3Nb/hxeBj6Rztv3vR+gW+JY21y3pkTTADSOINOIKkcau
+arcwQGEMAWM3UjK315796Ldi7ddvHohgW1ighkzdidBfcONatYnIXZew/770UnB
+ecimz4yqJvCo1SritasC@LHFdbeudgBivJtQ/CD1/So9Mkrw6VNUXohv5L3i33
+3fNI9geM1oC/ZIGL1HLfOsyJ7GokRsypd 1YWFQvNNhu1OupanRA==
+</ds :SignatureValue>
+<ds:KeyInfo Id="_98742d60-2afc -4fa7-a731-828756ce47b1">
+<ds:X509Data>
+<ds:X509Certificate>MIID0DCCArigAwIBAgIBBTANBgkqghkiG9WOBAQsFAD
+BMMQswCQYDVQQGEWIGUEcMBoGAIUECewTS2V5bmV4G1zLUSw2W5UcnV2dDEFMBO
+GALUEAnwWT381bRydXNOIFR1¢3QZ0CEgUGhBMjAeFwOxitjExMTUwMDU3
+MzVaFw
+OxNDEXMTUWMOU3MzVaMFexCZAJBgNVBAYTAK]UMQ8wDQYDVQQKDAZPIFR
+FU1QXE
+JAQBENVBASMCUSVIFRFUIQgMjESMBAGAIUECww)T2UgVEVTVCAXxMRAWD
+gYDVQQ
+DDAdUZXNGIENO:MIIBI5ANBgkqhkiGowOBAQEFAAOCAQSAMIIBCeKCAQE
+AtnB/1
+12FOScVqDI12Q)RsZZh9TK7ANLnxxnR2EP1hRP7GRanksgyYMIECiL/AN
+nTEhft
+Qe7AGSaWeX7x05GHIGd72NwnFQazVjHyaTBXSxaxUoG4kc1F5QaOOvvxU
+AHTtM2
+qYNjpgFyKkTGbASD7IgS36zTRYauE40kGhU2/pv1nG3jIKAU40f90gkQe
+4+hw2I
+xkNO‘ImRaxPunkYoZWVn3geL/QQ1H/yggkBdpLG2qmTUm09¢vyVdycABd
+l+SRSG
+NyR42xVRcbS6rv150cbnbsrvkcbms1Gdo/qnKkvxcthXstt3TqGq+kZ1C
+IHDoJs
+F8ZDQKuljXMEgsurt/OHQIDAQAO4GuiGtMBGGA1UdDgQUBBRsJehOf8/t
+O6YtFO
+4hEYcc1COz0TAFBgNVHSMEGDANgBRRcvObAGFfzbq1TCZOMpE7ji+fpTA
+RBglgh
+kgBhvhCAQEEBAMCB4AWOegYDVROPAQH/BAQDASbAMEBGA1UdHwRBMDGwP
+aA70Dm
+GN2h@dHAGLy9wa210ZXNOLm9wZW5GcnVzdC5jb2GvT3B]b1RydXN@X1R1c3RFQO
+FFUGHBMI5jcmmwOQYIKOZThvcNAQELBQADggEBAGMAU3YO2Z9Ff1FLX/DHVcwST
+SotZ]aYtJindYcEtvhjY24vcXJzwbfopVu91XZFuxXjG12SSyksK4sRHF
+UVPQdr
+yAMGZMUW+0gjVFjupV54jr6vkaEL2té6oyE52CHqvvlHyLJz5CIW6jDEm
+@AZGNI
+ZlwdRr4afud9zM21m4X5J1Ts2GxY/JHO2F1155QJuVn7NSFFxBPxRsIKY
+NZ+27k
+cZNTSL9ZDWYXob5PUBVEOFXMhWPJtngzBOISNGQDVQIjtnbecsSgDchRM
+Vy4JOU
+DBUK7RAIpG4aR/5RKaMkO@6DLHXJteXfmsKfLyDq3H8B+eHefJIWCeYMn
+vqk755 EVNE=</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+</Sgntr>
+</GrpHdr>
+<PmtInf>
+<PmtInfId>PAY_223373223482738299</PmtInfId>
+<PmtMtd>TRF</PmtMtd>
+<BtchBookg>false</BtchBookg>
+<ReqdExctnDt>2020-04-28</ReqdExctnDt>
+<Dbtr>
+<Nm></Nm>
+</Dbtr>
+<DbtrAcct>
+<Id>
+<Othr>
+<Id>sampleuser1@user.idtp</Id>
+</Othr>
+</Id>
+</DbtrAcct>
+<DbtrAgt>
+<FinInstnId>
+<BICFI>FI_SWIFT1</BICFI>
+</FinInstnId>
+</DbtrAgt>
+<CdtTrfTxInf>
+<PmtId>
+<InstrId>MSG_334873223482738299</InstrId>
+<EndToEndId>TRAN_34873223482738299</EndToEndId>
+</PmtId>
+<Amt>
+<InstdAmt Ccy="BDT">1000</InstdAmt>
+</Amt>
+<ChrgBr>SHAR</ChrgBr>
+<CdtrAgt>
+<FinInstnId>
+<BICFI>FI_SWIFT2</BICFI>
+</FinInstnId>
+</CdtrAgt>
+<Cdtr>
+<Nm></Nm>
+</Cdtr>
+<CdtrAcct>
+<Id>
+<Othr>
+<Id>sampleuser2@user.idtp</Id>
+</Othr>
+</Id>
+</CdtrAcct>
+</CdtTrfTxInf>
+</PmtInf>
+<SplmtryData>
+<PlcAndNm/>
+<Envlp>
+<DeviceInfo>
+<Device_ID>012HGRTBHDGBKLBVB</Device_ID>
+<Mobile_No>="+8801985245697</Mobile_No>
+<Location>23.7805,90.4267</Location>
+<IP>10.0.0.1</IP>
+</DeviceInfo>
+<IDTP_PIN>XXXXXX</IDTP_PIN>
+<VID>sampleuser@user.idtp</VID>
+<Channel>App/Portal/XXX</Channel>
+</Envlp>
+</SplmtryData>
+</CstmrCdtTrfInitn>
+</Document>

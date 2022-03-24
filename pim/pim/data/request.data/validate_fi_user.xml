@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidateFIUser xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+   <Head ver="1.0" ts="{timestamp}" orgId="sample1" msgId="1" />
+   <Req id="{request_id}" note="Validate IDTP User" ts="{timestamp}" type="VALIDATEUSERINFO" />
+   <UserInfo>
+      <UserType>Individual</UserType>
+      <NID>234324234234234</NID>
+      <BIN />
+      <DOB>1997/07/22</DOB>
+      <DateOfIncorporation />
+      <MobileNo>017XXXXX244</MobileNo>
+   </UserInfo>
+   <OtherInfo />
+</ValidateFIUser>

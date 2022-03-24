@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetTransactionsbyUser xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+    <Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1"/>
+<Req id="{request_id}" note="Get User Transaction History" ts="{timestamp}" type="GETTRANSACTIONSBYUSER"/>
+<ChannelInfo>
+<ChannelID>Online</ChannelID>
+</ChannelInfo>
+ <IDTPUserInfo >
+ <DeviceInfo>
+ <Device_ID></Device_ID>
+ <Mobile_No></Mobile_No>
+ <Location></Location>
+ <IP></IP>
+ </DeviceInfo>
+ <UserInfo>
+ <UserVID value="{vid}"/>
+ <FromDate>2020-2-1</FromDate>
+ <ToDate>2021-12-31</ToDate>
+ <PageNumber>1</PageNumber>
+ <PageSize>20</PageSize>
+ </UserInfo>
+ <OtherInfo/>
+</IDTPUserInfo>
+<Creds>
+<Cred type="IDTP_PIN" subtype="">
+<Data>1234</Data>
+</Cred>
+</Creds>
+</GetTransactionsbyUser>

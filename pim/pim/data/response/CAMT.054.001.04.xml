@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPDU xmlns="urn:swift:saa:xsd:saa.2.0">
+   <Revision>2.0.5</Revision>
+   <Body>
+      <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+         <Fr>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>IDTP</BICFI>
+               </FinInstnId>
+            </FIId>
+         </Fr>
+         <To>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>FI_SWIFT1</BICFI>
+               </FinInstnId>
+            </FIId>
+         </To>
+         <BizMsgIdr>MSG_334873223482738299</BizMsgIdr>
+         <MsgDefIdr>camt.054.001.04</MsgDefIdr>
+         <BizSvc>IDTP</BizSvc>
+         <CreDt>2020-04-07T13:50:45Z</CreDt>
+         <Sgntr>
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="_beddd7de-c63a–43a6-9b62-f69290939eb6">
+               <ds:SignedInfo>
+                  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/ 10/xml -excc14n#" />
+                  <ds:SignatureMethod Algorithm="http: / /www.w3.org/2001/04/xmldsigmore#rsa- sha256" />
+                  <ds:Reference URI="#_98742d60-2afc -4fa7-a731-828756ce47b1">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http: //www.w3.org/2001/10/xml-exc- cl4n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http: //www.w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>vB/
+xxu+qkEVUH5i9uVdBHOXOp6+XDsAn/iHxH+UiMGo=</ds:DigestValue>
+                  </ds:Reference>
+                  <ds:Reference URI="">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http: //www.w3. org/2000/09/xmldsig#tenvelopedsignature" />
+                        <ds:Transform Algorithm="http: //www.w3. org/2001/10/xml-exc- cl4n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http: //www. w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>hWGkHPu5IMYxe4KF
+YyaMOFWYqOw2pi+BYnYvHEwm/Z8=</ds:DigestValue>
+                  </ds:Reference>
+                  <ds:Reference>
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http: //www.w3.org/2001/10/xml-exc- c14n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http: //www. w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>10eHeNdJM1v177MOHzFsmP0IBMYvdPXVuRcR77hAgUg=</ds:DigestValue>
+                  </ds:Reference>
+               </ds:SignedInfo>
+               <ds:SignatureValue></ds:SignatureValue>
+               <ds:KeyInfo Id="_98742d60-2afc -4fa7-a731-828756ce47b1">
+                  <ds:X509Data>
+                     <ds:X509Certificate></ds:X509Certificate>
+                  </ds:X509Data>
+               </ds:KeyInfo>
+            </ds:Signature>
+         </Sgntr>
+      </AppHdr>
+      <Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.04">
+         <BkToCstmrDbtCdtNtfctn>
+            <GrpHdr>
+               <MsgId>MSG_334873223482738299</MsgId>
+               <CreDtTm>2020-04-07T16:50:45</CreDtTm>
+            </GrpHdr>
+            <Ntfctn>
+               <Id>MSG_334873223482738299</Id>
+               <CreDtTm>2020-04-07T16:50:45</CreDtTm>
+               <Acct>
+                  <Id>
+                     <Othr>
+                        <Id>sampleuser1@user.idtp</Id>
+                     </Othr>
+                  </Id>
+               </Acct>
+               <Ntry>
+                  <NtryRef>SAMPLEREF</NtryRef>
+                  <Amt Ccy="BDT">1000.00</Amt>
+                  <CdtDbtInd>DBIT</CdtDbtInd>
+                  <Sts>BOOK</Sts>
+                  <ValDt>
+                     <Dt>2020-03-15</Dt>
+                  </ValDt>
+                  <BkTxCd>
+                     <Prtry>
+                        <Cd>NTAV</Cd>
+                     </Prtry>
+                  </BkTxCd>
+                  <NtryDtls>
+                     <TxDtls>
+                        <Refs>
+                           <InstrId>MSG_334873223482738299</InstrId>
+                           <EndToEndId>TRAN_34873223482738299</EndToEndId>
+                           <TxId>TRAN_34873223482738299</TxId>
+                        </Refs>
+                        <Amt Ccy="BDT">1000.00</Amt>
+                        <CdtDbtInd>DBIT</CdtDbtInd>
+                        <RltdPties>
+                           <InitgPty>
+                              <Nm>SAMPLE_NAME1</Nm>
+                           </InitgPty>
+                           <Cdtr>
+                              <Id>
+                                 <OrgId>
+                                    <AnyBIC>FI_SWIFT1</AnyBIC>
+                                 </OrgId>
+                              </Id>
+                           </Cdtr>
+                        </RltdPties>
+                        <RltdDts>
+                           <TxDtTm>2020-03-15T00:00:00</TxDtTm>
+                        </RltdDts>
+                     </TxDtls>
+                  </NtryDtls>
+               </Ntry>
+            </Ntfctn>
+         </BkToCstmrDbtCdtNtfctn>
+      </Document>
+   </Body>
+</DataPDU>

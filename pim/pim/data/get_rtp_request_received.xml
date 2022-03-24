@@ -1,0 +1,13 @@
+<GetRTPListReceived xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+  <Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1" ></Head>
+  <Req id="{request_id}" note="Get User RTP Received List" ts="{timestamp}" type="GETRTPLISTRECEIVED" ></Req>
+  <ChannelInfo>
+    <ChannelID>Online</ChannelID>
+  </ChannelInfo>
+  <IDTPUserInfo>
+    <UserInfo>
+      <UserVID value="{receiver_vid}" ></UserVID>
+    </UserInfo>
+    <OtherInfo ></OtherInfo>
+  </IDTPUserInfo>
+</GetRTPListReceived>

@@ -1,0 +1,37 @@
+<TransferFunds xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+  <Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1" ></Head>
+  <Req id="{request_id}" note="Transfer Funds" ts="{timestamp}" type="TRANSFERFUNDS" ></Req>
+  <ChannelInfo>
+    <ChannelID>Online</ChannelID>
+  </ChannelInfo>
+  <TransactionInfo addr="" type="">
+    <SenderInfo>
+      <SenderVID value="{sender_vid}" ></SenderVID>
+    </SenderInfo>
+    <DeviceInfo>
+      <Device_ID></Device_ID>
+      <Mobile_No></Mobile_No>
+      <Location></Location>
+      <IP></IP>
+    </DeviceInfo>
+    <ReceiverInfo>
+      <ReceiverVID value="{receiver_vid}" ></ReceiverVID>
+    </ReceiverInfo>
+    <TxnInfo addrType="">
+      <ReferenceNo value="{ref_no}" ></ReferenceNo>
+      <TxnAmount value="{amount}" ></TxnAmount>
+    </TxnInfo>
+    <OtherInfo>
+      <Purpose>{purpose}</Purpose>
+      <BillNo></BillNo>
+    </OtherInfo>
+    <RTPInfo>
+     <RTPID>{ref_no}</RTPID>
+    </RTPInfo>
+    <Creds>
+      <Cred type="IDTP_PIN" subtype="">
+        <Data>{idtp_pin}</Data>
+      </Cred>
+    </Creds>
+  </TransactionInfo>
+</TransferFunds>

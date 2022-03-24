@@ -1,0 +1,21 @@
+<GetTransactionsbyFI xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+<Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1"></Head>
+ <Req id="{request_id}" note="Get Transactions by FI" ts="{timestamp}" type="GETTRANSACTIONSBYFI"></Req>
+ <ChannelInfo>
+ <ChannelID>Online</ChannelID>
+ </ChannelInfo>
+ <ReqInfo>
+ <FIInfo>
+ <UserVID value="{vid}"></UserVID>
+ <FromDate>1/1/2019</FromDate>
+ <ToDate>12/31/2021</ToDate>
+ <SettlementStatus>1</SettlementStatus>
+ <TransactionStatus>1</TransactionStatus>
+ <TransactionType>1</TransactionType>
+ <RoutingNo>215261726</RoutingNo>
+ <PageNumber>1</PageNumber>
+ <PageSize>100000</PageSize>
+ </FIInfo>
+ <OtherInfo></OtherInfo>
+ </ReqInfo>
+</GetTransactionsbyFI>

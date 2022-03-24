@@ -1,0 +1,15 @@
+<GetDailyTransactions xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+  <Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1" ></Head>
+  <Req id="{request_id}" note="Get                 Daily FI Transactions"
+       ts="{timestamp}" type="GETDAILYTRANSACTIONS" ></Req>
+  <ChannelInfo>
+    <ChannelID>Online</ChannelID>
+  </ChannelInfo>
+  <ReqInfo>
+    <FIInfo>
+      <UserVID value="{vid}" ></UserVID>
+      <BIC>SCBLBDDX</BIC>
+    </FIInfo>
+    <OtherInfo ></OtherInfo>
+  </ReqInfo>
+</GetDailyTransactions>

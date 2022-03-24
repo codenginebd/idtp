@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPDU xmlns="urn:swift:saa:xsd:saa.2.0">
+   <Revision>2.0.5</Revision>
+   <Body>
+      <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+         <Fr>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>IDTP</BICFI>
+               </FinInstnId>
+            </FIId>
+         </Fr>
+         <To>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>SCBLBDDX</BICFI>
+               </FinInstnId>
+            </FIId>
+         </To>
+         <BizMsgIdr>IDTP20210204150150681</BizMsgIdr>
+         <MsgDefIdr>pacs.008.001.06</MsgDefIdr>
+         <BizSvc>IDTP</BizSvc>
+         <CreDt>2021-02-04T15:01:50Z</CreDt>
+         <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:SignedInfo>
+               <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+               <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+               <ds:Reference>
+                  <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+                  <ds:DigestValue>aI98+6lGsxBQKqG1s4rLP6OLx4wsCNRYN/9r4lIfXj0=</ds:DigestValue>
+               </ds:Reference>
+            </ds:SignedInfo>
+            <ds:SignatureValue>UH1cryzhfocYF06favnJshKYP53uTrFORF5LnKHjqvEFbCNmO+WTVjY0DbKqZQP0vieK0MGaBayzFPZJkXHuYPLGlrhKwk58ieKlFkA+uWSAZmitVqePl4j5sroQOMTgJ8qh5K0K9KdWCGaPAIpD2hmNjQhKMslulu/IuF7tpUC2LXC1YGTnQsOwp101yBM5ZitIHuv4cK2+FDgzyYQefZzqOWORlgEL/ItrCmoxDcuMJKdak81dxJr1E/lRobZHQye+B5sC0kIGQOl3O8387CymL3pDhg/2wy9clIQ3E+ay3Ynyo+PJzUYqWfrSQVcool8bitX6gVWiHhZBVrEw7Q==</ds:SignatureValue>
+         </ds:Signature>
+      </AppHdr>
+      <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.06">
+         <FIToFICstmrCdtTrf>
+            <GrpHdr>
+               <MsgId>8beb3403-13c6-401d-92e2-94d7e1792208</MsgId>
+               <CreDtTm>2021-02-04T15:01:50</CreDtTm>
+               <NbOfTxs>1</NbOfTxs>
+               <TtlIntrBkSttlmAmt>100.00</TtlIntrBkSttlmAmt>
+               <IntrBkSttlmDt>2021-02-04</IntrBkSttlmDt>
+               <SttlmInf>
+                  <SttlmMtd>IDTP</SttlmMtd>
+               </SttlmInf>
+            </GrpHdr>
+            <CdtTrfTxInf>
+               <PmtId>
+                  <InstrId>IDTP20210204150150681</InstrId>
+                  <EndToEndId>8beb3403-13c6-401d-92e2-94d7e1792208</EndToEndId>
+                  <TxId>IDTP20210204150150681</TxId>
+               </PmtId>
+               <PmtTpInf>
+                  <ClrChanl>CBS</ClrChanl>
+                  <SvcLvl>
+                     <Prtry>0075</Prtry>
+                  </SvcLvl>
+                  <LclInstrm>
+                     <Prtry>IDTP</Prtry>
+                  </LclInstrm>
+                  <CtgyPurp>
+                     <Prtry>001</Prtry>
+                  </CtgyPurp>
+               </PmtTpInf>
+               <IntrBkSttlmAmt Ccy="BDT">100.00</IntrBkSttlmAmt>
+               <ChrgBr>SHAR</ChrgBr>
+               <InstgAgt>
+                  <FinInstnId>
+                     <BICFI>SCBLBDDX</BICFI>
+                  </FinInstnId>
+               </InstgAgt>
+               <InstdAgt>
+                  <FinInstnId>
+                     <BICFI>SCBLBDDX</BICFI>
+                  </FinInstnId>
+               </InstdAgt>
+               <Dbtr>
+                  <Nm />
+               </Dbtr>
+               <DbtrAcct>
+                  <Id>
+                     <Othr>
+                        <Id>02348950701</Id>
+                     </Othr>
+                  </Id>
+               </DbtrAcct>
+               <DbtrAgt>
+                  <FinInstnId>
+                     <BICFI>SCBLBDDX</BICFI>
+                  </FinInstnId>
+               </DbtrAgt>
+               <DbtrAgtAcct>
+                  <Id>
+                     <Othr>
+                        <Id>SCBLBDDX566</Id>
+                     </Othr>
+                  </Id>
+               </DbtrAgtAcct>
+               <CdtrAgt>
+                  <FinInstnId>
+                     <BICFI>SCBLBDDX</BICFI>
+                  </FinInstnId>
+               </CdtrAgt>
+               <CdtrAgtAcct>
+                  <Id>
+                     <Othr>
+                        <Id>SCBLBDDX566</Id>
+                     </Othr>
+                  </Id>
+               </CdtrAgtAcct>
+               <Cdtr>
+                  <Nm />
+               </Cdtr>
+               <CdtrAcct>
+                  <Id>
+                     <Othr>
+                        <Id>02111376301</Id>
+                     </Othr>
+                  </Id>
+               </CdtrAcct>
+               <RmtInf>
+                  <Ustrd>Testing</Ustrd>
+               </RmtInf>
+            </CdtTrfTxInf>
+            <SplmtryData>
+               <PlcAndNm />
+               <Envlp>
+                  <Tx_Tracking_Info>
+                     <RefNo_SendingPSP />
+                     <RefNo_SendingBank>8beb3403-13c6-401d-92e2-94d7e1792208</RefNo_SendingBank>
+                     <RefNo_ReceivingBank />
+                     <RefNo_ReceivingPSP />
+                     <RefNo_IDTP>IDTP20210204150150681</RefNo_IDTP>
+                  </Tx_Tracking_Info>
+               </Envlp>
+            </SplmtryData>
+         </FIToFICstmrCdtTrf>
+      </Document>
+   </Body>
+</DataPDU>

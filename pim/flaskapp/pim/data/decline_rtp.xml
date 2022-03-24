@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SendRTPDeclinedResponse xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+   <Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1" />
+   <Req id="{request_id}" note="RTP Declined Response" ts="{timestamp}" type="SENDRTPDECLINEDRESPONSE" />
+   <ChannelInfo>
+      <ChannelID>Online</ChannelID>
+   </ChannelInfo>
+   <RequestInfo addr="" type="">
+      <SenderInfo>
+         <SenderVID value="{sender_vid}" />
+      </SenderInfo>
+      <DeviceInfo>
+         <Device_ID />
+         <Mobile_No />
+         <Location />
+         <IP />
+      </DeviceInfo>
+      <ReceiverInfo>
+         <ReceiverVID value="{receiver_vid}" />
+      </ReceiverInfo>
+      <ReqInfo addrType="">
+         <RTPId value="{rtp_id}" />
+         <ReqAmount value="" />
+      </ReqInfo>
+      <OtherInfo />
+   </RequestInfo>
+</SendRTPDeclinedResponse>

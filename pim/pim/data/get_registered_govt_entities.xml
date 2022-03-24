@@ -1,0 +1,19 @@
+<GetRegisteredGovtEntityList xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+  <Head ver="1.0" ts="2020-05-16T14:15:43+05:30" orgId="SCBLBDDX" msgId="1" ></Head>
+  <Req id="8ENSVVR4QOS7X1UGPY7JGUV444PL9T2C3QM" note="Get Govt Entity List" ts="2020-05-16T14:15:42+05:30" type="GETREGISTEREDGOVTENTITYLIST" ></Req>
+  <ChannelInfo>
+    <ChannelID>Online</ChannelID>
+  </ChannelInfo>
+  <ReqUserInfo>
+    <DeviceInfo>
+      <Device_ID></Device_ID>
+      <Mobile_No></Mobile_No>
+      <Location></Location>
+      <IP></IP>
+    </DeviceInfo>
+    <UserInfo>
+      <UserVID value="SCBL@fin.idtp" ></UserVID>
+    </UserInfo>
+    <OtherInfo ></OtherInfo>
+  </ReqUserInfo>
+</GetRegisteredGovtEntityList>

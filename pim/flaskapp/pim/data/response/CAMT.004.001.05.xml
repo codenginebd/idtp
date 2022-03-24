@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPDU xmlns="urn:swift:saa:xsd:saa.2.0">
+   <Revision>2.0.5</Revision>
+   <Body>
+      <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+         <Fr>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>SBL1BDDH</BICFI>
+               </FinInstnId>
+            </FIId>
+         </Fr>
+         <To>
+            <FIId>
+               <FinInstnId>
+                  <BICFI>IDTP</BICFI>
+               </FinInstnId>
+            </FIId>
+         </To>
+         <BizMsgIdr>{idtp_ref_no}</BizMsgIdr>
+         <MsgDefIdr>camt.004.001.05</MsgDefIdr>
+         <BizSvc>IDTP</BizSvc>
+         <CreDt>{timestamp}</CreDt>
+      </AppHdr>
+      <Document xmlns="urn:swift:xsd:camt.004.001.05">
+         <RtrAcct>
+            <MsgHdr>
+               <MsgId>{idtp_ref_no}</MsgId>
+               <CreDtTm>{timestamp}</CreDtTm>
+               <OrgnlBizQry>
+                  <MsgId>{idtp_ref_no}</MsgId>
+               </OrgnlBizQry>
+            </MsgHdr>
+            <RptOrErr>
+               <AcctRpt>
+                  <AcctId>
+                     <Othr>
+                        <Id>{account_number}</Id>
+                     </Othr>
+                  </AcctId>
+                  <AcctOrErr>
+                     <Acct>
+                        <Tp>
+                           <Cd>AA</Cd>
+                        </Tp>
+                        <Ccy>BDT</Ccy>
+                        <CurMulLmt>
+                           <Amt>
+                              <AmtWthtCcy>{balance}</AmtWthtCcy>
+                           </Amt>
+                           <CdtDbtInd>DBIT</CdtDbtInd>
+                        </CurMulLmt>
+                        <Ownr>
+                           <Id>
+                              <OrgId />
+                           </Id>
+                        </Ownr>
+                     </Acct>
+                  </AcctOrErr>
+               </AcctRpt>
+            </RptOrErr>
+         </RtrAcct>
+      </Document>
+   </Body>
+</DataPDU>

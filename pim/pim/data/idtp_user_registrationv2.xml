@@ -1,0 +1,64 @@
+<RegisterUser xmlns:idtp="http://idtp.gov.bd/xxx/schema/">
+  <Head ver="1.0" ts="{timestamp}" orgId="SCBLBDDX" msgId="1" ></Head>
+  <Req id="{request_id}" note="RegisterUser" ts="{timestamp}" type="RegisterUser" ></Req>
+    <Entity seqNum="1">
+    <ChannelInfo>
+      <ChannelID>Online</ChannelID>
+    </ChannelInfo>
+        <Info>
+            <EntityType>Individual</EntityType>
+            <Name>{full_name}</Name>
+            <AddressLine1>{address_line1}</AddressLine1>
+            <AddressLine2>{address_line2}</AddressLine2>
+            <District>{district}</District>
+            <PostalCode>{postal_code}</PostalCode>
+            <MobileNumber>{mobile_number}</MobileNumber>
+            <Email>{email}</Email>
+            <TypeOfOwnership></TypeOfOwnership>
+            <TypeOfBusiness></TypeOfBusiness>
+            <NameOfMinistry></NameOfMinistry>
+            <NameOfDivision></NameOfDivision>
+            <TypeOfFinancialInstitution></TypeOfFinancialInstitution>
+            <SwiftCode></SwiftCode>
+            <CBAccountNumber></CBAccountNumber>
+            <NID>{nid}</NID>
+            <TIN>{tin}</TIN>
+            <BIN></BIN>
+            <IDTPKey></IDTPKey>
+            <DateOfBirth>{dob}</DateOfBirth>
+            <DateOfIncorporation>01/01/0001 00:00:00</DateOfIncorporation>
+            <CallBackURL></CallBackURL>
+            <Password>{password}</Password>
+        </Info>
+        <DeviceInfo>
+            <Device_ID></Device_ID>
+            <Mobile_No></Mobile_No>
+            <Location></Location>
+            <IP></IP>
+        </DeviceInfo>
+        <FinancialInstitutionInfo>
+            <FinancialInstitution>Standard Chartered</FinancialInstitution>
+            <BranchName></BranchName>
+            <RoutingNumber>SCBLBDDH</RoutingNumber>
+            <AccountNumber>{account_number}</AccountNumber>
+        </FinancialInstitutionInfo>
+        <ContactReference>
+            <ContactPersonName></ContactPersonName>
+            <Designation></Designation>
+            <ContactNumber></ContactNumber>
+            <Email></Email>
+        </ContactReference>
+        <Creds>
+      <Cred type="IDTP_PIN" subtype="">
+        <Data>{idtp_pin}</Data>
+      </Cred>
+      <Cred type="APP_PASS" subtype="">
+        <Data>{app_pass}</Data>
+      </Cred>
+    </Creds>
+        <RequestedVirtualID value="{request_vid}" ></RequestedVirtualID>
+        <OtherInfo>
+            <Call_From>FIApp</Call_From>
+        </OtherInfo>
+    </Entity>
+</RegisterUser>

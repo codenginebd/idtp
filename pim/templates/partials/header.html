@@ -1,0 +1,265 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand lspacing-03 fweight-600" href="/">PIM - IDTP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link lspacing-03 fweight-500" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lspacing-03 fweight-500" href="/GetDailyTransactions/">Daily Transactions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lspacing-03 fweight-500" href="/audit-log/">Audit Logs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lspacing-03 fweight-500" href="{% url "scb_accounts_view" %}">All SCB Accounts</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2 lspacing-03 fweight-500" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 lspacing-03 fweight-500" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="d-flex flex-wrap justify-content-end p-3">
+    <button id="idBtnReqRTP" class="btn btn-outline-danger fa fa-user-plus mr-2"> Request RTP</button>
+    <button id="idBtnTrnsferFund" class="btn btn-outline-danger fa fa-user-plus mr-3"> Transfer Fund</button>
+    <button id="idBtnRegNewUser" class="btn btn-outline-danger fa fa-user-plus"> Register New User</button>
+</div>
+
+<div class="modal fade" id="idDialogUserReg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 100%;">
+    <div class="modal-content">
+      <div class="modal-header d-flex flex-column">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+            </button>
+        <h5 class="modal-title" style="display: block;" id="exampleModalLongTitle">IDTP User Registration</h5>
+        <div class="d-flex flex-wrap justify-content-between">
+            <p class="hint mt-2" style="display: block;">* Each field is required otherwise explicitely mentioned as optional</p>
+            <button id="idBtnSubmitReg" type="button" class="btn btn-danger ml-2">Save</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form id="idFormUserReg" action="#" method="post" class="d-flex flex-wrap justify-content-around">
+            <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Your name</small>
+              <input type="text" name="full_name" class="form-control theme-form-input" size="50"/>
+        </div>
+        <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Address Line 1</small>
+              <input type="text" name="address_line1" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Address Line 2</small>
+              <input type="text" name="address_line2" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">District</small>
+              <input type="text" name="district" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Postal Code</small>
+              <input type="text" name="postal_code" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Mobile Number</small>
+              <input type="text" name="mobile_number" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Email</small>
+              <input type="text" name="email" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">NID</small>
+              <input type="text" name="nid" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">TIN</small>
+              <input type="text" name="tin" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Date of Birth</small>
+              <input type="text" name="dob" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Account Number</small>
+              <input type="text" name="account_number" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">IDTP PIN</small>
+              <input type="text" name="idtp_pin" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">App Pass</small>
+              <input type="password" name="app_pass" class="form-control theme-form-input" size="50"/>
+        </div>
+            <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">IDTP Password</small>
+              <input type="password" name="password" class="form-control theme-form-input" size="50"/>
+        </div>
+          <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Request VID</small>
+              <input type="text" name="request_vid" class="form-control theme-form-input" size="50"/>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="idDialogFundTransfer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Direct Pay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="idFormFundTransfer" action="#" method="post" class="d-flex flex-column pl-5">
+            <div class="form-group theme-form-input-container">
+                  <small class="theme-form-input-label" for="idCreateListingInputPlace">Sender VID</small>
+                  <input type="text" name="sender_vid" class="form-control theme-form-input" size="50"/>
+            </div>
+            <div class="form-group theme-form-input-container">
+                  <small class="theme-form-input-label" for="idCreateListingInputPlace">Receiver VID</small>
+                  <input type="text" name="receiver_vid" class="form-control theme-form-input" size="50"/>
+            </div>
+              <div class="form-group theme-form-input-container">
+                  <small class="theme-form-input-label" for="idCreateListingInputPlace">Amount</small>
+                  <input type="number" name="amount" class="form-control theme-form-input" size="50"/>
+            </div>
+              <div class="form-group theme-form-input-container">
+                  <small class="theme-form-input-label" for="idCreateListingInputPlace">Purpose</small>
+                  <input type="text" name="purpose" class="form-control theme-form-input" size="50"/>
+            </div>
+              <div class="form-group theme-form-input-container">
+                  <small class="theme-form-input-label" for="idCreateListingInputPlace">Your IDTP PIN</small>
+                  <input type="password" name="idtp_pin" class="form-control theme-form-input" size="50"/>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer d-flex flex-wrap justify-content-center">
+        <button id="idBtnTransferFund" type="button" class="btn btn-danger">Send Money</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="idDialogRTP" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Request To Pay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="idFormReqRTPForm" action="#" method="post" class="d-flex flex-column pl-5">
+                <div class="form-group theme-form-input-container">
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Payer VID</small>
+              <input required type="text" name="payer_vid" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label" for="idCreateListingInputPlace">Payee VID</small>
+                      <input required type="text" name="payee_vid" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label" for="idCreateListingInputPlace">Amount</small>
+                      <input required type="number" name="amount" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label" for="idCreateListingInputPlace">Purpose</small>
+                      <input required type="text" name="purpose" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                          <small class="theme-form-input-label" for="idCreateListingInputPlace">Your IDTP PIN</small>
+                          <input type="password" name="idtp_pin" class="form-control theme-form-input" size="50"/>
+                </div>
+          </form>
+      </div>
+      <div class="modal-footer d-flex flex-wrap justify-content-center">
+        <button id="idBtnReqRTPSubmit" type="button" class="btn btn-danger">Request RTP Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="idDialogRTPAccept" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Approve RTP</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="idFormAcceptRTPForm" data-rtp-id="-1" action="#" method="post" class="d-flex flex-column pl-5">
+              <div class="form-group theme-form-input-container">
+              <input id="idHiddenRefNoAcceptRTP" type="hidden" name="ref_no"/>
+              <small class="theme-form-input-label" for="idCreateListingInputPlace">Payer VID</small>
+              <input readonly type="text" name="sender_vid" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label">Payee VID</small>
+                      <input readonly required type="text" name="receiver_vid" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label">Amount</small>
+                      <input readonly required type="number" name="amount" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label">Referrance</small>
+                      <input readonly required type="text" name="purpose" class="form-control theme-form-input" size="50"/>
+                </div>
+                  <div class="form-group theme-form-input-container">
+                          <small class="theme-form-input-label">Your IDTP PIN</small>
+                          <input type="password" name="idtp_pin" class="form-control theme-form-input" size="50"/>
+                </div>
+          </form>
+      </div>
+      <div class="modal-footer d-flex flex-wrap justify-content-center">
+        <button id="idBtnReqRTPAcceptSubmit" type="button" class="btn btn-danger">Approve</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="idDialogViewUserTnxHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">View Daily Transaction</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="idFormViewUserTnxHistoryForm" data-rtp-id="-1" action="#" method="post" class="d-flex flex-column pl-5">
+              <div class="form-group theme-form-input-container">
+              <input id="idHiddenTnxUserVid" type="hidden" name="vid"/>
+                  <div class="form-group theme-form-input-container">
+                      <small class="theme-form-input-label">Your IDTP PIN</small>
+                      <input id="idViewUserTnxIDTPPin" type="password" name="idtp_pin" class="form-control theme-form-input" size="50"/>
+                </div>
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer d-flex flex-wrap justify-content-center">
+        <button id="idFormViewUserTnxHistoryFormSubmit" type="button" class="btn btn-danger">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

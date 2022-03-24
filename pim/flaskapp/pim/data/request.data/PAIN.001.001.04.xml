@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.04" xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance">
+   <CstmrCdtTrfInitn>
+      <GrpHdr>
+         <MsgId>MSG_334873223482738299</MsgId>
+         <CreDtTm>2020-04-28T14:07:00</CreDtTm>
+         <NbOfTxs>1</NbOfTxs>
+         <CtrlSum>1000</CtrlSum>
+         <InitgPty>
+            <Nm>SAMPLENAME1</Nm>
+         </InitgPty>
+         <Sgntr>
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="_beddd7de-c63a–43a6-9b62-f69290939eb6">
+               <ds:SignedInfo>
+                  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/ 10/xml -excc14n#" />
+                  <ds:SignatureMethod Algorithm="http: / /www.w3.org/2001/04/xmldsigmore#rsa- sha256" />
+                  <ds:Reference URI="#_98742d60-2afc -4fa7-a731-828756ce47b1">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http: //www.w3.org/2001/10/xml-exc- cl4n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http: //www.w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>vB/xxu+qkEVUH5i9uVdBHOXOp6+XDsAn/iHxH+UiMGo=</ds:DigestValue>
+                  </ds:Reference>
+                  <ds:Reference URI="">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http: //www.w3. org/2000/09/xmldsig#tenvelopedsignature" />
+                        <ds:Transform Algorithm="http: //www.w3.org/2001/10/xml-exc- cl4n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http: //www. w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>hWGkHPu5IMYxe4KF
+YyaMOFWYqOw2pi+BYnYvHEwm/Z8=</ds:DigestValue>
+                  </ds:Reference>
+                  <ds:Reference>
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http: //www.w3.org/2001/10/xml-exc- c14n#" />
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http: //www. w3.org/2001/04/xmlenc#sha256" />
+                     <ds:DigestValue>10eHeNdJM1v177MOHzFsmP0IBMYvdPXVuRcR77hAgUg=</ds:DigestValue>
+                  </ds:Reference>
+               </ds:SignedInfo>
+               <ds:SignatureValue />
+               <ds:KeyInfo Id="_98742d60-2afc -4fa7-a731-828756ce47b1">
+                  <ds:X509Data>
+                     <ds:X509Certificate />
+                  </ds:X509Data>
+               </ds:KeyInfo>
+            </ds:Signature>
+         </Sgntr>
+      </GrpHdr>
+      <PmtInf>
+         <PmtInfId>PAY_223373223482738299</PmtInfId>
+         <PmtMtd>TRF</PmtMtd>
+         <BtchBookg>false</BtchBookg>
+         <ReqdExctnDt>2020-04-28</ReqdExctnDt>
+         <Dbtr>
+            <Nm />
+         </Dbtr>
+         <DbtrAcct>
+            <Id>
+               <Othr>
+                  <Id>sampleuser1@user.idtp</Id>
+               </Othr>
+            </Id>
+         </DbtrAcct>
+         <DbtrAgt>
+            <FinInstnId>
+               <BICFI>FI_SWIFT1</BICFI>
+            </FinInstnId>
+         </DbtrAgt>
+         <CdtTrfTxInf>
+            <PmtId>
+               <InstrId>MSG_334873223482738299</InstrId>
+               <EndToEndId>TRAN_34873223482738299</EndToEndId>
+            </PmtId>
+            <Amt>
+               <InstdAmt Ccy="BDT">1000</InstdAmt>
+            </Amt>
+            <ChrgBr>SHAR</ChrgBr>
+            <CdtrAgt>
+               <FinInstnId>
+                  <BICFI>FI_SWIFT2</BICFI>
+               </FinInstnId>
+            </CdtrAgt>
+            <Cdtr>
+               <Nm />
+            </Cdtr>
+            <CdtrAcct>
+               <Id>
+                  <Othr>
+                     <Id>sampleuser2@user.idtp</Id>
+                  </Othr>
+               </Id>
+            </CdtrAcct>
+         </CdtTrfTxInf>
+      </PmtInf>
+      <SplmtryData>
+         <PlcAndNm />
+         <Envlp>
+            <DeviceInfo>
+               <Device_ID>012HGRTBHDGBKLBVB</Device_ID>
+               <Mobile_No>="+8801985245697</Mobile_No>
+               <Location>23.7805,90.4267</Location>
+               <IP>10.0.0.1</IP>
+            </DeviceInfo>
+            <IDTP_PIN>XXXXXX</IDTP_PIN>
+            <VID>sampleuser@user.idtp</VID>
+            <Channel>App/Portal/XXX</Channel>
+         </Envlp>
+      </SplmtryData>
+   </CstmrCdtTrfInitn>
+</Document>
